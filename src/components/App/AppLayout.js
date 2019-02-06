@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { css, injectGlobal } from "../../emotion";
 import { pageShape, pagesShape } from "../../CatalogPropTypes";
-import NavigationBar from "./NavigationBar";
+// import NavigationBar from "./NavigationBar";
 import PageHeader from "../Page/PageHeader";
 
 const SIDEBAR_WIDTH = 251;
@@ -113,13 +113,13 @@ class AppLayout extends React.Component {
   }
 
   render() {
-    const { sideNav, theme, pages, page } = this.props;
+    const { sideNav, theme, page } = this.props;
     const { sidebarVisible } = this.state;
 
     const styles = getStyles(theme, sidebarVisible);
 
-    const nextPage = pages[page.index + 1];
-    const previousPage = pages[page.index - 1];
+    // const nextPage = pages[page.index + 1];
+    // const previousPage = pages[page.index - 1];
 
     return (
       <div className={css(styles.container)}>
