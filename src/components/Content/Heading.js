@@ -4,7 +4,7 @@ import HeadingLink from "../Link/HeadingLink";
 import { catalogShape } from "../../CatalogPropTypes";
 import { heading } from "../../styles/typography";
 import { css } from "../../emotion";
-import { reduce } from "rxjs/operators";
+
 
 const HeadingWithLink = ({ level, text, slug, catalog: { theme } }) => {
   const tag = "h" + level;
@@ -44,8 +44,8 @@ const Heading = ({ level, text, slug }, { catalog }) =>
   slug ? (
     <HeadingWithLink level={level} text={text} slug={slug} catalog={catalog} />
   ) : (
-    <PlainHeading level={level} text={text} catalog={catalog} />
-  );
+      <PlainHeading level={level} text={text} catalog={catalog} />
+    );
 
 Heading.propTypes = HeadingWithLink.propTypes = PlainHeading.propTypes = {
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,

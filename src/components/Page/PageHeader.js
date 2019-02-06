@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "../../emotion";
 import { heading } from "../../styles/typography";
-import { reduce } from "rxjs/operators";
 
 class PageHeader extends Component {
   render() {
