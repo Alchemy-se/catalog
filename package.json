@@ -1,6 +1,6 @@
 {
-  "name": "catalog",
-  "version": "3.6.0",
+  "name": "@alchemy-se/catalog",
+  "version": "3.7.0",
   "description": "Create living style guides using Markdown or React",
   "keywords": [
     "styleguide",
@@ -11,7 +11,7 @@
     "markdown"
   ],
   "homepage": "https://www.catalog.style/",
-  "bugs": "https://github.com/interactivethings/catalog/issues",
+  "bugs": "https://github.com/Alchemy-se/catalog/issues",
   "main": "dist/catalog.cjs.js",
   "module": "dist/catalog.es.js",
   "unpkg": "dist/catalog-standalone.min.js",
@@ -125,7 +125,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/interactivethings/catalog.git"
+    "url": "https://github.com/Alchemy-se/catalog.git"
   },
   "license": "BSD-3-Clause",
   "jest": {
