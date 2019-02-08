@@ -56,7 +56,7 @@ export default {
   // Fonts
   fontFamily: "Vattenfall Hall",
   fontHeading: "Vattenfall Hall",
-  fontMono: "Vattenfall Hall",
+  fontMono: "'Roboto Mono', monospace",
 
   // Base font size in pixels.
   baseFontSize: 16,

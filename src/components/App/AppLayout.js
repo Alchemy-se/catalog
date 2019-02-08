@@ -86,7 +86,7 @@ const getStyles = (theme, sidebarVisible) => ({
     fontFamily: "Vattenfall Hall",
     minHeight: "100vh",
     lineHeight: "32px",
-    width: "70%",
+    width: "90%",
     flexDirection: "column",
     position: "relative",
     zIndex: 0, // To create a new stacking context, see #223.
