@@ -4,6 +4,7 @@ import { css } from "../../emotion";
 import { pagesShape } from "../../CatalogPropTypes";
 import { heading, text, getFontSize } from "../../styles/typography";
 import Link from "../Link/Link";
+import logo from "./catalog_logo.svg";
 
 import ListItem from "./ListItem";
 
@@ -12,8 +13,8 @@ export function style(theme) {
 
   return {
     bar: {
-      background: theme.sidebarColor,
-      height: "100vh",
+      background: "#EDF1F6",
+      height: "100%",
       display: "flex",
       flexDirection: "column"
     },
@@ -29,7 +30,7 @@ export function style(theme) {
     },
     title: {
       ...heading(theme, 1),
-      color: theme.sidebarColorHeading,
+      color: "black",
       fontWeight: 700,
       marginBottom: logoBottomMargin,
       marginTop: 0
@@ -52,7 +53,6 @@ export function style(theme) {
       overflow: "hidden"
     },
     list: {
-      borderBottom: `1px solid ${theme.sidebarColorLine}`,
       listStyle: "none",
       margin: 0,
       padding: 0
@@ -65,10 +65,10 @@ export function style(theme) {
     info: {
       ...text(theme, -1),
       padding: 20,
-      color: theme.lightColor
+      color: "#1964A3"
     },
     link: {
-      color: theme.lightColor
+      color: "#1964A3"
     }
   };
 }
@@ -85,22 +85,7 @@ class Menu extends React.Component {
       <div className={css(currentStyle.bar)}>
         <div className={css({ flexGrow: 1 })}>
           <Link to={basePath} className={css({ textDecoration: "none" })}>
-            <h1 className={css(currentStyle.h1)}>
-              {logoSrc ? (
-                <div
-                  className={css({
-                    ...currentStyle.logo,
-                    backgroundImage: `url("${logoSrc}")`
-                  })}
-                >
-                  <span className={css(currentStyle.logoTitle)}>
-                    {titleString}
-                  </span>
-                </div>
-              ) : (
-                <div className={css(currentStyle.title)}>{titleString}</div>
-              )}
-            </h1>
+            <h1 className={css(currentStyle.h1)} />
           </Link>
           <ul className={css(currentStyle.list)}>
             {pageTree
@@ -111,15 +96,26 @@ class Menu extends React.Component {
           </ul>
         </div>
         <div className={css(currentStyle.info)}>
-          Powered by{" "}
-          <a
-            className={css(currentStyle.link)}
-            href="https://www.catalog.style/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Catalog
-          </a>
+          <p>
+            <a
+              className={css(currentStyle.link)}
+              href="https://www.github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
+          </p>
+          <p>
+            <a
+              className={css(currentStyle.link)}
+              href="https://www.absctract.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abstract
+            </a>
+          </p>
         </div>
       </div>
     );

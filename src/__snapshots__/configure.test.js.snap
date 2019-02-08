@@ -277,7 +277,7 @@ Object {
     "sidebarColorHeading": "#003B5C",
     "sidebarColorLine": "#EBEBEB",
     "sidebarColorText": "#003B5C",
-    "sidebarColorTextActive": "#FF5555",
+    "sidebarColorTextActive": "#003B5C",
     "textColor": "#333333",
   },
   "title": "Catalog",

@@ -31,9 +31,11 @@ export const Paragraph = styled("p", (props, { theme }) => ({
   margin: `40px 20px 40px 90px`,
   width: "50%",
   fontFamily: "Vattenfall Hall",
+  color: "black",
   fontSize: "16px",
   lineHeight: "32px"
 }));
+
 export const UnorderedList = styled("ul", {
   ...baseListStyle,
   listStyle: "disc",
@@ -89,7 +91,7 @@ export const Image = styled("img", {
 
 export const Link = (props, { catalog: { theme } }) => {
   const baseLinkStyle = {
-    color: theme.linkColor,
+    color: "black",
     transition: "none",
     border: "none",
     background: "none",
