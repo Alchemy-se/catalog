@@ -4,7 +4,7 @@ import { css } from "../../emotion";
 import { pagesShape } from "../../CatalogPropTypes";
 import { heading, text, getFontSize } from "../../styles/typography";
 import Link from "../Link/Link";
-import logo from "./catalog_logo.svg";
+// import abstractLogo from "../../assets/abstract.svg";
 
 import ListItem from "./ListItem";
 
@@ -75,7 +75,14 @@ export function style(theme) {
 
 class Menu extends React.Component {
   render() {
-    const { theme, pageTree, logoSrc, title, basePath } = this.props;
+    const {
+      theme,
+      pageTree,
+      logoSrc,
+      menuFooter,
+      title,
+      basePath
+    } = this.props;
 
     const currentStyle = style(theme);
 
@@ -85,7 +92,22 @@ class Menu extends React.Component {
       <div className={css(currentStyle.bar)}>
         <div className={css({ flexGrow: 1 })}>
           <Link to={basePath} className={css({ textDecoration: "none" })}>
-            <h1 className={css(currentStyle.h1)} />
+            <h1 className={css(currentStyle.h1)}>
+              {logoSrc ? (
+                <div
+                  className={css({
+                    ...currentStyle.logo,
+                    backgroundImage: `url("${logoSrc}")`
+                  })}
+                >
+                  <span className={css(currentStyle.logoTitle)}>
+                    {titleString}
+                  </span>
+                </div>
+              ) : (
+                <div className={css(currentStyle.title)}>{titleString}</div>
+              )}
+            </h1>
           </Link>
           <ul className={css(currentStyle.list)}>
             {pageTree
@@ -95,28 +117,7 @@ class Menu extends React.Component {
               ))}
           </ul>
         </div>
-        <div className={css(currentStyle.info)}>
-          <p>
-            <a
-              className={css(currentStyle.link)}
-              href="https://www.github.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Github
-            </a>
-          </p>
-          <p>
-            <a
-              className={css(currentStyle.link)}
-              href="https://www.absctract.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Abstract
-            </a>
-          </p>
-        </div>
+        <div>{menuFooter()}</div>
       </div>
     );
   }
@@ -126,6 +127,7 @@ Menu.propTypes = {
   pageTree: pagesShape.isRequired,
   theme: PropTypes.object.isRequired,
   logoSrc: PropTypes.string,
+  menuFooter: PropTypes.func,
   basePath: PropTypes.string,
   title: PropTypes.string
 };

@@ -42,7 +42,7 @@ const style = theme => {
       "&:hover, &:active, &:focus": {
         ...baseLinkStyle,
         borderTop: "none",
-        color: theme.sidebarColorText,
+        color: theme.sidebarColorTextActive,
         borderLeft: "3px solid",
         textDecoration: "none",
         background: "none"
@@ -68,11 +68,11 @@ const style = theme => {
       }
     },
     nestedActiveLink: {
-      color: theme.sidebarColorText,
+      color: "#222222",
       cursor: "auto",
       "&:hover, &:active, &:focus": {
         ...baseLinkStyle,
-        color: theme.sidebarColorText,
+        color: "#444444",
         textDecoration: "none",
         background: "none"
       }

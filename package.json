@@ -18,12 +18,7 @@
   "engines": {
     "npm": ">=2.14.12"
   },
-  "files": [
-    "dist",
-    "babel.js",
-    "loader.js",
-    "types"
-  ],
+  "files": ["dist", "babel.js", "loader.js", "types"],
   "types": "types/catalog",
   "bin": {
     "catalog": "dist/cli/bin/catalog.js",
@@ -33,14 +28,10 @@
   "scripts": {
     "preversion": "make test",
     "prepublishOnly": "make test && make build",
-    "precommit": "lint-staged",
     "prettier-all": "prettier --write \"**/*.{js,ts,tsx}\""
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{js,ts,tsx}": ["prettier --write", "git add"]
   },
   "dependencies": {
     "args": "^3.0.8",
@@ -129,8 +120,6 @@
   },
   "license": "BSD-3-Clause",
   "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ]
+    "roots": ["<rootDir>/src"]
   }
 }
