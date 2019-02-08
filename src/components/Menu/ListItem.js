@@ -39,11 +39,11 @@ const style = theme => {
       color: "#222222",
       cursor: "auto",
       padding: "16px 40px 8px 40px",
+      borderLeft: "4px solid #1964A3",
       "&:hover, &:active, &:focus": {
         ...baseLinkStyle,
         borderTop: "none",
         color: theme.sidebarColorTextActive,
-        borderLeft: "3px solid",
         textDecoration: "none",
         background: "none"
       },
