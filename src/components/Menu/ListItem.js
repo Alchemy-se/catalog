@@ -8,7 +8,6 @@ import { text } from "../../styles/typography";
 
 const baseLinkStyle = {
   background: "none",
-  border: "none",
   transition: "none"
 };
 
@@ -24,6 +23,7 @@ const style = theme => {
       fontWeight: "500",
       cursor: "pointer",
       display: "block",
+      borderLeft: "4px solid transparent",
       margin: 0,
       padding: "16px 42px",
       textDecoration: "none",
@@ -58,6 +58,7 @@ const style = theme => {
     },
     nestedLink: {
       borderTop: "none",
+      color: "#222222",
       borderBottom: "none",
       padding: "8px 24px 8px 60px",
       "&:hover, &:active, &:focus": {
