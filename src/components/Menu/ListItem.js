@@ -58,7 +58,7 @@ const style = theme => {
     },
     nestedLink: {
       borderTop: "none",
-      color: "#222222",
+      color: "#1964A3",
       borderBottom: "none",
       padding: "8px 24px 8px 60px",
       "&:hover, &:active, &:focus": {

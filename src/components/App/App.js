@@ -12,6 +12,7 @@ const getDocumentTitle = ({ title, page }) =>
     : `${title} – ${page.superTitle} – ${page.title}`;
 
 const renderStyles = styles => {
+  if (!styles) return null;
   return styles.map((src, i) => (
     <link key={i} href={src} rel="stylesheet" type="text/css" />
   ));
