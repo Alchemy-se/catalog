@@ -129,6 +129,7 @@
   },
   "license": "BSD-3-Clause",
   "jest": {
+    "testURL": "http://localhost/",
     "roots": [
       "<rootDir>/src"
     ]
