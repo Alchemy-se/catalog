@@ -6,11 +6,11 @@ import { catalogShape } from "../../CatalogPropTypes";
 import Page from "./Page";
 import runscript from "../../utils/runscript";
 
-const renderStyles = styles => {
-  return styles.map((src, i) => (
-    <link key={i} href={src} rel="stylesheet" type="text/css" />
-  ));
-};
+// const renderStyles = styles => {
+//   return styles.map((src, i) => (
+//     <link key={i} href={src} rel="stylesheet" type="text/css" />
+//   ));
+// };
 
 const renderContent = Content =>
   typeof Content === "string" ? <Page>{Content}</Page> : <Content />;
@@ -81,11 +81,11 @@ class PageRenderer extends PureComponent {
 
   render() {
     const { content } = this.props;
-    const {
-      catalog: {
-        page: { styles }
-      }
-    } = this.context;
+    // const {
+    //   catalog: {
+    //     page: { styles }
+    //   }
+    // } = this.context;
     return <div>{renderContent(content)}</div>;
   }
 }
