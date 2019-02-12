@@ -8,14 +8,13 @@ DIST_TARGETS = \
 	dist/babel \
 	dist/setup-template \
 	rollup-lib \
-	rollup-standalone \
 
 CLI_SUCCESS = \033[1;32m✔
 CLI_ERROR   = \033[1;31m✘
 CLI_QUERY   = \033[1;36m→
 CLI_RESET   = \033[0m
 
-.PHONY: build build-watch rollup-lib rollup-standalone version publish clean clobber lint test test-watch docs build-docs dtslint
+.PHONY: build build-watch rollup-lib version publish clean clobber lint test test-watch docs build-docs dtslint
 
 all: build-watch
 
@@ -57,10 +56,6 @@ build: node_modules clean $(DIST_TARGETS)
 rollup-lib:
 	@BABEL_ENV=rollup $$(yarn bin)/rollup $< --config=rollup.config.lib.js
 	@echo -e "$(CLI_SUCCESS) Built rollup modules$(CLI_RESET)"
-
-rollup-standalone:
-	@BABEL_ENV=rollup $$(yarn bin)/rollup $< --config=rollup.config.standalone.js
-	@echo -e "$(CLI_SUCCESS) Built rollup standalone$(CLI_RESET)"
 
 dist/loader.js: src/loader.js
 	@BABEL_ENV=lib $$(yarn bin)/babel $< --ignore test.js --out-file $@
