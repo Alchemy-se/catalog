@@ -13,6 +13,8 @@ yarn add @alchemy-se/catalog
 Run these commands to generate a new release and push it to npm
 
 ```
+make test
+make build
 make version
 git push && git push --tags
 make publish

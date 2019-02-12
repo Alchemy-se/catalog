@@ -29,7 +29,7 @@ export const text = (theme, level = 0) => ({
 // Heading font style
 export const heading = (theme, level = 0) => ({
   ...baseTextStyle,
-  color: theme.brandColor,
+  color: "#222222", //theme.brandColor,
   fontFamily: theme.fontHeading,
   fontSize: getFontSize(theme, level),
   lineHeight: theme.msRatio,
