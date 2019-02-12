@@ -36,6 +36,7 @@ class Page extends Component {
 
     return (
       <div
+        id="mainpage"
         className={css({
           ...pageStyle
         })}
