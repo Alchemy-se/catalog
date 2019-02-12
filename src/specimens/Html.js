@@ -137,6 +137,7 @@ class Html extends React.Component {
     }
     const nextParentWidth = this.specimen.getBoundingClientRect().width - 30;
     if (nextParentWidth !== this.state.parentWidth) {
+      console.log({ nextParentWidth });
       this.setState({ parentWidth: nextParentWidth });
     }
   }

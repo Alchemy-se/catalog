@@ -136,6 +136,10 @@ class ReactSpecimen extends Component {
     }
     const nextParentWidth = this.specimen.getBoundingClientRect().width - 30;
     if (nextParentWidth !== this.state.parentWidth) {
+      console.log({
+        where: "ReactSpecimen",
+        nextParentWidth
+      });
       this.setState({ parentWidth: nextParentWidth });
     }
   }
@@ -150,7 +154,11 @@ class ReactSpecimen extends Component {
 
   render() {
     const {
-      catalog: { page: { imports }, theme, responsiveSizes },
+      catalog: {
+        page: { imports },
+        theme,
+        responsiveSizes
+      },
       children,
       frame,
       sourceText,
