@@ -8,7 +8,6 @@ import { text } from "../../styles/typography";
 
 const baseLinkStyle = {
   background: "none",
-  border: "none",
   transition: "none"
 };
 
@@ -18,27 +17,29 @@ const style = theme => {
       ...text(theme),
       ...baseLinkStyle,
       borderTop: "none",
-      color: "black",
+      color: "#1964A3",
       fontSize: "16px",
       fontFamily: "Vattenfall Hall",
       fontWeight: "500",
       cursor: "pointer",
       display: "block",
+      borderLeft: "4px solid transparent",
       margin: 0,
-      padding: "16px 40px",
+      padding: "16px 42px",
       textDecoration: "none",
       "&:hover, &:active, &:focus": {
         ...baseLinkStyle,
         borderTop: "none",
-        color: theme.sidebarColorTextActive,
         textDecoration: "none",
+        color: "#2071B5",
         background: "rgba(255,255,255,0.1)"
       }
     },
     activeLink: {
-      color: theme.sidebarColorTextActive,
+      color: "#222222",
       cursor: "auto",
       padding: "16px 40px 8px 40px",
+      borderLeft: "4px solid #1964A3",
       "&:hover, &:active, &:focus": {
         ...baseLinkStyle,
         borderTop: "none",
@@ -57,21 +58,22 @@ const style = theme => {
     },
     nestedLink: {
       borderTop: "none",
+      color: "#1964A3",
       borderBottom: "none",
       padding: "8px 24px 8px 60px",
       "&:hover, &:active, &:focus": {
         ...baseLinkStyle,
-        color: theme.sidebarColorTextActive,
+        color: theme.sidebarColorText,
         textDecoration: "none",
         background: "rgba(255,255,255,0.1)"
       }
     },
     nestedActiveLink: {
-      color: theme.sidebarColorTextActive,
+      color: "#222222",
       cursor: "auto",
       "&:hover, &:active, &:focus": {
         ...baseLinkStyle,
-        color: theme.sidebarColorTextActive,
+        color: "#444444",
         textDecoration: "none",
         background: "none"
       }

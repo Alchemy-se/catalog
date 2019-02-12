@@ -1,6 +1,6 @@
 {
   "name": "@alchemy-se/catalog",
-  "version": "4.1.0",
+  "version": "4.3.0",
   "description": "Create living style guides using Markdown or React",
   "keywords": [
     "styleguide",
@@ -31,9 +31,9 @@
     "catalog-build": "dist/cli/bin/catalog-build.js"
   },
   "scripts": {
+    "update-tests": "jest -u",
     "preversion": "make test",
     "prepublishOnly": "make test && make build",
-    "precommit": "lint-staged",
     "prettier-all": "prettier --write \"**/*.{js,ts,tsx}\""
   },
   "lint-staged": {

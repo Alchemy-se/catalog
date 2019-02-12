@@ -10,6 +10,7 @@ const pageStyle = {
   boxSizing: "border-box",
   margin: `0 20px 0 20px`,
   maxWidth: "64em",
+  fontFamily: "Vattenfall Hall",
   display: "flex",
   flexFlow: "row wrap",
   padding: `48px 0`,
@@ -35,6 +36,7 @@ class Page extends Component {
 
     return (
       <div
+        id="mainpage"
         className={css({
           ...pageStyle
         })}

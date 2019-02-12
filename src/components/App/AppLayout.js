@@ -9,10 +9,9 @@ const SIDEBAR_WIDTH = 251;
 const SIDEBAR_ANIMATION_DURATION = 0.25;
 
 injectGlobal`
-  @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,400italic);
-  @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,700);
 
   body {
+    fontFamily: "Vattenfall Hall",
     margin: 0;
     padding: 0;
   }
@@ -84,9 +83,10 @@ const getStyles = (theme, sidebarVisible) => ({
   content: {
     boxSizing: "border-box",
     display: "flex",
+    fontFamily: "Vattenfall Hall",
     minHeight: "100vh",
     lineHeight: "32px",
-    width: "70%",
+    width: "90%",
     flexDirection: "column",
     position: "relative",
     zIndex: 0, // To create a new stacking context, see #223.
@@ -133,11 +133,6 @@ class AppLayout extends React.Component {
         </div>
         <MenuIcon
           className={css(styles.menuIcon)}
-          onClick={this.toggleSidebar}
-          onTouchEnd={this.toggleSidebar}
-        />
-        <div
-          className={css(styles.navBackground)}
           onClick={this.toggleSidebar}
           onTouchEnd={this.toggleSidebar}
         />

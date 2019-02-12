@@ -4,6 +4,7 @@ import { css } from "../../emotion";
 import { pagesShape } from "../../CatalogPropTypes";
 import { heading, text, getFontSize } from "../../styles/typography";
 import Link from "../Link/Link";
+// import abstractLogo from "../../assets/abstract.svg";
 
 import ListItem from "./ListItem";
 
@@ -12,8 +13,8 @@ export function style(theme) {
 
   return {
     bar: {
-      background: theme.sidebarColor,
-      height: "100vh",
+      background: "#EDF1F6",
+      height: "100%",
       display: "flex",
       flexDirection: "column"
     },
@@ -29,7 +30,7 @@ export function style(theme) {
     },
     title: {
       ...heading(theme, 1),
-      color: theme.sidebarColorHeading,
+      color: "black",
       fontWeight: 700,
       marginBottom: logoBottomMargin,
       marginTop: 0
@@ -52,7 +53,6 @@ export function style(theme) {
       overflow: "hidden"
     },
     list: {
-      borderBottom: `1px solid ${theme.sidebarColorLine}`,
       listStyle: "none",
       margin: 0,
       padding: 0
@@ -65,17 +65,24 @@ export function style(theme) {
     info: {
       ...text(theme, -1),
       padding: 20,
-      color: theme.lightColor
+      color: "#1964A3"
     },
     link: {
-      color: theme.lightColor
+      color: "#1964A3"
     }
   };
 }
 
 class Menu extends React.Component {
   render() {
-    const { theme, pageTree, logoSrc, title, basePath } = this.props;
+    const {
+      theme,
+      pageTree,
+      logoSrc,
+      menuFooter,
+      title,
+      basePath
+    } = this.props;
 
     const currentStyle = style(theme);
 
@@ -110,17 +117,7 @@ class Menu extends React.Component {
               ))}
           </ul>
         </div>
-        <div className={css(currentStyle.info)}>
-          Powered by{" "}
-          <a
-            className={css(currentStyle.link)}
-            href="https://www.catalog.style/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Catalog
-          </a>
-        </div>
+        <div>{menuFooter()}</div>
       </div>
     );
   }
@@ -130,6 +127,7 @@ Menu.propTypes = {
   pageTree: pagesShape.isRequired,
   theme: PropTypes.object.isRequired,
   logoSrc: PropTypes.string,
+  menuFooter: PropTypes.func,
   basePath: PropTypes.string,
   title: PropTypes.string
 };

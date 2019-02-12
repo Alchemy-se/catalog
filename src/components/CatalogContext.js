@@ -12,6 +12,8 @@ class CatalogContext extends Component {
       theme,
       responsiveSizes,
       logoSrc,
+      menuFooter,
+      globalStyles,
       pages,
       pageTree,
       specimens,
@@ -35,6 +37,8 @@ class CatalogContext extends Component {
         basePath,
         publicUrl,
         logoSrc,
+        menuFooter,
+        globalStyles,
         useBrowserHistory
       }
     };

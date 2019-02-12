@@ -11,13 +11,26 @@ const getDocumentTitle = ({ title, page }) =>
     ? `${page.superTitle} – ${page.title}`
     : `${title} – ${page.superTitle} – ${page.title}`;
 
+const renderStyles = styles => {
+  if (!styles) return null;
+  return styles.map((src, i) => (
+    <link key={i} href={src} rel="stylesheet" type="text/css" />
+  ));
+};
+
 class App extends React.Component {
   render() {
     const { catalog } = this.context;
+
+    const {
+      catalog: { globalStyles }
+    } = this.context;
+
     return (
       <AppLayout {...catalog} sideNav={<Menu {...catalog} />}>
         <DocumentTitle title={getDocumentTitle(catalog)} />
         {Children.only(this.props.children)}
+        {renderStyles(globalStyles)}
       </AppLayout>
     );
   }

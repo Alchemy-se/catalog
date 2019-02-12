@@ -28,8 +28,8 @@ export default {
   brandColor: "#003B5C",
 
   sidebarColor: "#FFFFFF",
-  sidebarColorText: "#003B5C",
-  sidebarColorTextActive: "#FF5555",
+  sidebarColorText: "#FF5555",
+  sidebarColorTextActive: "#003B5C",
   sidebarColorLine: "#EBEBEB",
   sidebarColorHeading: "#003B5C",
 
@@ -54,8 +54,8 @@ export default {
     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAAAAACoWZBhAAAAFklEQVQI12NQBQF2EGAghQkmwXxSmADZJQiZ2ZZ46gAAAABJRU5ErkJggg==",
 
   // Fonts
-  fontFamily: "'Roboto', sans-serif",
-  fontHeading: "'Roboto', sans-serif",
+  fontFamily: "Vattenfall Hall",
+  fontHeading: "Vattenfall Hall",
   fontMono: "'Roboto Mono', monospace",
 
   // Base font size in pixels.
