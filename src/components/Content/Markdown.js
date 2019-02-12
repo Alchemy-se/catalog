@@ -89,7 +89,7 @@ export const Image = styled("img", {
   maxWidth: "100%"
 });
 
-export const Link = (props, { catalog: { theme } }) => {
+export const Link = props => {
   const baseLinkStyle = {
     color: "black",
     transition: "none",

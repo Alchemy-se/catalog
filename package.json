@@ -26,6 +26,7 @@
     "catalog-build": "dist/cli/bin/catalog-build.js"
   },
   "scripts": {
+    "update-tests": "jest -u",
     "preversion": "make test",
     "prepublishOnly": "make test && make build",
     "prettier-all": "prettier --write \"**/*.{js,ts,tsx}\""

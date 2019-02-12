@@ -5,7 +5,7 @@ import { heading } from "../../styles/typography";
 
 class PageHeader extends Component {
   render() {
-    const { theme, title, superTitle } = this.props;
+    const { theme, title } = this.props;
 
     const styles = {
       outerHeader: {

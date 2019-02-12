@@ -26,8 +26,6 @@ class App extends React.Component {
       catalog: { globalStyles }
     } = this.context;
 
-    console.log(globalStyles);
-
     return (
       <AppLayout {...catalog} sideNav={<Menu {...catalog} />}>
         <DocumentTitle title={getDocumentTitle(catalog)} />
