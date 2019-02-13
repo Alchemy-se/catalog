@@ -29,7 +29,7 @@ const MenuIcon = props => (
 
 const getStyles = (theme, sidebarVisible) => ({
   container: {
-    margin: 0,
+    marginTop: '103px',
     padding: 0,
     width: "100%",
     height: "100%",

@@ -35,7 +35,7 @@ class PageHeader extends Component {
         color: theme.pageHeadingTextColor,
         fontFamily: "Vattenfall Hall",
         fontSize: "56px",
-        fontWeight: "bold"
+        fontWeight: "bold",
       }
     };
 
